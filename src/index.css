@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* Light base to match target site */
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+::selection {
+  @apply bg-npr-red text-white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-npr-red/30 rounded-full hover:bg-npr-red/50 transition-colors;
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif;
+}
+
+.btn-primary {
+  @apply bg-npr-red text-white px-6 py-3 rounded-full font-bold hover:bg-red-700 transition-colors uppercase tracking-wider text-sm;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900;
+}
